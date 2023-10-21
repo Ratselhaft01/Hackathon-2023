@@ -108,8 +108,9 @@ body {margin:0;}
 .back_button {
     grid-column: 1;
     grid-row: 1;
-    height: 42px;
-    width: 42px;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
 }
 
 footer {
