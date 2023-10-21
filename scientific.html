@@ -5,42 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cool Notes</title>
     <link rel="stylesheet" href="public/styles/scientific.css">
-</head>
+</head> 
+   
 <body>
-    <a href="home.html" class="back_button">
-        <img src="public/images/back arrow better.png" alt="back arrow" style="width:42px;height:42px;">
-        <!-- <h2> Your notes </h2> -->
-    </a>
-    <h2> Your notes </h2>
+    <header>
+        <a href="home.html" class="back_button">
+            <img src="public/images/back arrow better.png" alt="back arrow" style="width:42px;height:42px;">
+        </a>
+        <h2>Type your Scientific note here:</h2>
+    </header>
     <div class="grid-container">
-        <!-- <h2> Your notes </h2> -->
-        <div class="icon-bar">
-            <a href="#"><i class=""></i></a> 
-            <a href="#"><i class=""></i></a> 
-            <a href="#"><i class=""></i></a> 
-            <a href="#"><i class=""></i></a>
-            <a href="#"><i class=""></i></a>
+        <div class = "textbox1">
+            <div id="textEditor1" contenteditable="true">
+                This is an example text. Select a part of this text and click the buttons to format it.
+            </div>
+        </div>
+        <div class = "textbox2">
+            <div id="textEditor2" contenteditable="true" class = "text2">
+                This is an example text. Select a part of this text and click the buttons to format it.
+            </div>
+        </div>
+        <div class = "textbox3">
+            <div id="textEditor3" contenteditable="true" class = "text3">
+                This is an example text. Select a part of this text and click the buttons to format it.
+            </div>
         </div>
 
-        <!-- <h1> Your notes </h1> -->
+        <div class="icon-bar">
+            <button type="button" class="logo"><b>Logo</b></button>
+            <button type="button" class="new Section"><b>New Section</b></button>
+            <button type="button" class="new Picture"><b>New Picture</b></button>
+            <div class="drop">
+                <button type="button" class="format"><b>Formatting</b></button>
+                <div class="dropdown-content">
+                    <button onclick="formatText('bold')">Bold</button>
+                    <button onclick="formatText('italic')">Italic</button>
+                    <button onclick="formatText('underline')">Underline</button>
+                    <script src="public/js/formatting.js"></script>
+                </div>
+            </div>
 
-       
-        <textarea 
-            type="text" 
-            class="text" 
+        <!-- <textarea 
+            type="text1" 
+            class="text1" 
             rows="15" 
             cols="100" 
-            placeholder="Your notes go here "> 
+            placeholder="     Questions "></textarea> 
 
+        <textarea 
+            type="text2" 
+            class="text2" 
+            rows="15" 
+            cols="100" 
+            placeholder="     Your notes "></textarea> 
 
-        </textarea> 
-
-
-        <!-- <a href="home.html" class="back_button">
-            <img src="images/back arrow better.png" alt="back arrow" style="width:42px;height:42px;">
-            <h2> Your notes </h2>
-        </a> -->
-        <!-- <h1> Your notes </h1> -->
+            <textarea 
+            type="text3" 
+            class="text3" 
+            rows="15" 
+            cols="100" 
+            placeholder="     Summery "></textarea> -->
 
     </div>
 </body>
