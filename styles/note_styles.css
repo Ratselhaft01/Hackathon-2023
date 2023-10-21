@@ -36,3 +36,8 @@ body {margin:0;}
 .icon-bar a:hover {
     background-color: #519b5c;
 }
+
+.back_button {
+    grid-column: 1;
+    grid-row: 1;
+}
