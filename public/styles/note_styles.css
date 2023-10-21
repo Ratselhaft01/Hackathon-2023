@@ -3,7 +3,7 @@
     margin:0;
     display: grid;
     grid-template-rows: 1000px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 0px;
 }
 
@@ -11,9 +11,9 @@
     display: none;
 }
 
-.text {
-    grid-row: 1;
-    grid-column: 1/4;
+#textEditor {
+    grid-row: 1; 
+    grid-column: 1/2;
     width: 80vw;
     height: 100vw;
     border: 0;
