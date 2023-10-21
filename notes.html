@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="grid-container">
+        <div id="textEditor" contenteditable="true">
+            This is an example text. Select a part of this text and click the buttons to format it.
+        </div>
         <div class="icon-bar">
 
             <button type="button" class="logo"><b>Logo</b></button>
@@ -15,9 +18,6 @@
             <button type="button" class="new Picture"><b>New Picture</b></button>
             <div class="drop">
                 <button type="button" class="format"><b>Formatting</b></button>
-                <div id="textEditor" contenteditable="true">
-                    This is an example text. Select a part of this text and click the buttons to format it.
-                </div>
                 <div class="dropdown-content">
                     <button onclick="formatText('bold')">Bold</button>
                     <button onclick="formatText('italic')">Italic</button>
@@ -26,14 +26,14 @@
                 </div>
             </div>
         </div>
-        <textarea 
+        <!-- <textarea 
             type="text" 
             class="text" 
             rows="15" 
             cols="100" 
             placeholder="Your notes go here "
             style= background-color:aliceblue;> 
-        </textarea>
+        </textarea> -->
 
         <a href="home.html" class="back_button">
             <img src="public/images/back arrow better.png" alt="back arrow" style="width:42px;height:42px;">
