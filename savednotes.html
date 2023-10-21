@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+        body {
+        font-family: 'Lora', serif;
+        color: #2A3D45;
+        text-align: center;
+        font-size: 2vw;
+        }
+        #canvas-textarea {
+            width: 60%;
+            height: 700px;
+            display: block;
+            margin: 5px auto;
+        }
+        button{
+            margin: 20px;
+            width: 20%;
+            height: 40px;
+            background-color: #8DCECC;
+            font-family: 'Lora', serif;
+            color: #2A3D45;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Save notes here:</h1>
+    <p>Copy & paste your notes from the other pages into this textbox. Then select the right file you want to upload.</p>
+    <textarea id="canvas-textarea">Copy & paste right here folks...</textarea>
+    <button id="save-button">Save text as file</button>
+</body>
+<script>
+    function saveFileAs() {
+	if (promptFilename = prompt("Save file as", "")) {
+		var textBlob = new Blob([document.getElementById("canvas-textarea").value], {type:'text/plain'});
+		var downloadLink = document.createElement("a");
+		downloadLink.download = promptFilename;
+		downloadLink.innerHTML = "Download File";
+		downloadLink.href = window.URL.createObjectURL(textBlob);
+		downloadLink.click();
+    delete downloadLink;
+    delete textBlob;
+	}
+}
+
+document.getElementById("save-button").onclick = saveFileAs;
+</script>
+</html>
