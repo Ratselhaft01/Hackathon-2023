@@ -13,29 +13,72 @@
     width: 80vw;
     height: 100vw;
     border: 0;
+    border: none;
 }
 
 body {margin:0;}
 
-.icon-bar {
+.icon-bar button {
     grid-column: 4/5;
+    height: 125px;
     width: 20vw;
-    background-color: #9bf091;
-}
-
-/* .icon-bar a {
-    height: 100px;
+    justify-items: center;
+    align-items: center;
     display: block;
     text-align: center;
     padding: 16px;
     transition: all 0.3s ease;
     color: white;
     font-size: 36px;
-} */
+    border: none;
+}
 
-.icon-bar a:hover {
+.icon-bar button:hover {
     background-color: #519b5c;
 }
+
+.icon-bar {
+    grid-column: 4/5;
+    width: 20vw;
+    background-color: #9bf091;
+    border: none;
+}
+
+
+.format {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+  
+.drop {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 20vw;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 4;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {background-color: #ddd;}
+  
+.drop:hover .dropdown-content {display: block;}
+  
+.drop:hover .format {background-color: #2a3492;}
 
 .back_button {
     grid-column: 1;
@@ -43,76 +86,3 @@ body {margin:0;}
     height: 42px;
     width: 42px;
 }
-
-.icon-bar button {
-    justify-items: center;
-    align-items: center;
-    height: 100px;
-    width: 15vw;
-    display: block;
-    text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 36px;
-}
-/* 
-.bold {
-    z-index: 3;
-    width: 1fr;
-    height: 100px;
-    display: block;
-    text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 36px;
-}
-
-.italic {
-    z-index: 3;
-    width: 1fr;
-    height: 100px;
-    display: block;
-    text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 36px;
-}
-
-.underline {
-    z-index: 3;
-    width: 1fr;
-    height: 100px;
-    display: block;
-    text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 36px;
-}
-
-.text_color {
-    z-index: 3;
-    width: 1fr;
-    height: 100px;
-    display: block;
-    text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 36px;
-}
-
-.highlight_color {
-    z-index: 3;
-    width: 1fr;
-    height: 100px;
-    display: block;
-    text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 36px;
-} */
