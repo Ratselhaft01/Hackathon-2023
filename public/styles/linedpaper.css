@@ -6,23 +6,21 @@ body {
 }
 
 .grid-container {
-    margin:0;
+    margin: 0 10%;
     display: grid;
-    grid-template-rows: 1000px;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 0px;
+    gap: 3px;
+    width: 100%;
 }
 
-.text {
-    grid-row: 1;
-    grid-column: 1/4;
-    width: 80vw;
-    height: 100vw;
-    border: 0;
-}
 
-textarea{
+.textbox{
     outline: solid #2A3D45 3px;
+    grid-column: 1/4;
+}
+
+#textEditor{
     background: repeating-linear-gradient(
     to bottom, transparent, transparent 26px, #33d 27px
     );
@@ -31,27 +29,109 @@ textarea{
     padding: 0px 5px; margin: 8px;
 }
 
-.icon-bar {
-    grid-column: 4/5;
-    width: 20vw;
-    background-color: #9bf091;
+h2{
+    text-align: center;
+    margin-top: -30px;
 }
 
-.icon-bar a {
-    height: 100px;
+/* New Stuff */
+html {
+    margin: 0;
+}
+
+#formattedText {
+    display: none;
+}
+
+#textEditor {
+    grid-row: 1; 
+    grid-column: 1/2;
+    width: 75vw;
+    height: 1000px;
+    border: 0;
+    border: none;
+    outline: none;
+    padding: 30px;
+}
+
+body {margin:0;}
+
+.icon-bar button {
+    outline: solid #2A3D45 1px;
+    grid-column: 3;
+    height: 75px;
+    width: 10vw;
+    justify-items: center;
+    align-items: center;
     display: block;
     text-align: center;
     padding: 16px;
     transition: all 0.3s ease;
-    color: white;
-    font-size: 36px;
+    color: #8DCECC;
+    border: none;
+    min-width: 100px;
 }
 
-.icon-bar a:hover {
-    background-color: #519b5c;
+.icon-bar button:hover {
+    background-color: #2A3D45;
 }
 
-h2{
+.icon-bar {
+    outline: solid #2A3D45 3px;
+    grid-column: 4;
+    width: 10vw;
+    height: 1000px;
+    background-color: #2A3D45;
+    border: none;
+    min-width: 100px;
+}
+
+.format {
+    width: 10vw;
+    color: #8DCECC;
+    padding: 16px;
+    border: none;
     text-align: center;
-    margin-top: -30px;
+}
+  
+.drop {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    width: 10vw;
+    height: 40px;
+    display: none;
+    position: absolute;
+}
+
+.dropdown-content button {
+    width: 10vw;
+    height: 40px;
+    text-size-adjust: 10px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content button:hover {background-color: #ddd;}
+  
+.drop:hover .dropdown-content {display: block;}
+  
+.drop:hover .format {background-color: #2A3D45;}
+
+.back_button {
+    grid-column: 1;
+    grid-row: 1;
+    height: 42px;
+    width: 42px;
+}
+
+footer {
+    color: white;
+    margin: 0 0;
+    height: 50px;
+    background-color: #2A3D45;
 }
