@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
-.hidden {
-  display: none;
-}
-
-label {
-  margin-bottom: 10px;
-  display: block;
-}
-
 body {
   font-family: 'Lora', serif;
   color: #2A3D45;
@@ -143,8 +134,5 @@ span.psw {
   span.psw {
      display: block;
      float: none;
-  }
-  .cancelbtn {
-     width: 100%;
   }
 }
