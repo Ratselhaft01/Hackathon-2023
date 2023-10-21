@@ -2,15 +2,14 @@
 .grid-container {
     margin:0;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1000px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 0px;
 }
 
 .text {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row:1;
+    grid-row: 1;
+    grid-column: 1/4;
     width: 80vw;
     height: 100vw;
     border: 0;
@@ -19,14 +18,13 @@
 body {margin:0;}
 
 .icon-bar {
-    margin:0;
-    grid-column-start: 15;
-    grid-row: 1;
+    grid-column: 4/5;
     width: 20vw;
     background-color: #9bf091;
 }
 
 .icon-bar a {
+    height: 100px;
     display: block;
     text-align: center;
     padding: 16px;
