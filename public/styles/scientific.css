@@ -2,14 +2,24 @@
 .grid-container {
     margin:0;
     display: grid;
-    grid-template-rows: 1000px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 0px;
+    width: 90%;
+    /* border: black; */
 }
 
-.text {
-    grid-row: 1;
-    grid-column: 1/4;
+.text1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 80vw;
+    height: 100vw;
+    border: 0;
+}
+
+.text2 {
+    grid-row: 1/2;
+    grid-column: 2/4;
     width: 80vw;
     height: 100vw;
     border: 0;
@@ -36,12 +46,3 @@ body {margin:0;}
 .icon-bar a:hover {
     background-color: #519b5c;
 }
-
-.back_button {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-/* textarea{
-
-} */

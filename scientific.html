@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cool Notes</title>
-    <link rel="stylesheet" href="styles\note_styles.css">
+    <link rel="stylesheet" href="public\styles\note_styles.css">
 </head>
-<body>
-    <a href="home.html" class="back_button">
-        <img src="images/back arrow better.png" alt="back arrow" style="width:42px;height:42px;">
+<body> 
+    <div class="top-grid">
+        <h2>Your notes</h2>
+        <a href="home.html" class="back_button">
+        <img src="public\images/back arrow better.png" alt="back arrow" style="width:42px;height:42px;">
         <!-- <h2> Your notes </h2> -->
-    </a>
-    <h2> Your notes </h2>
+        </a>
+        <!-- <h2>Your notes</h2> -->
+    </div> 
     <div class="grid-container">
-        <!-- <h2> Your notes </h2> -->
         <div class="icon-bar">
             <a href="#"><i class=""></i></a> 
             <a href="#"><i class=""></i></a> 
@@ -22,25 +24,20 @@
             <a href="#"><i class=""></i></a>
         </div>
 
-        <!-- <h1> Your notes </h1> -->
-
-       
         <textarea 
-            type="text" 
-            class="text" 
+            type="text1" 
+            class="text1" 
             rows="15" 
             cols="100" 
-            placeholder="Your notes go here "> 
+            placeholder="     Your notes go here "></textarea> 
 
+        <textarea 
+            type="text2" 
+            class="text2" 
+            rows="15" 
+            cols="100" 
+            placeholder="     Your notes go here "></textarea> 
 
-        </textarea> 
-
-
-        <!-- <a href="home.html" class="back_button">
-            <img src="images/back arrow better.png" alt="back arrow" style="width:42px;height:42px;">
-            <h2> Your notes </h2>
-        </a> -->
-        <!-- <h1> Your notes </h1> -->
 
     </div>
 </body>
