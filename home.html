@@ -9,37 +9,29 @@
 </head>
 <body>
     <header>
-        <h1>Cool Notes</h1>
+        <img src="images/cool_notes_logo.jpg" class="logo" alt="logo">
     </header>
-    <p>Here are your notes!</p>
 
     
     <div class="topnav">
         <form action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search">
+            <input type="text" placeholder="Search..." name="search">
         
             <button type="submit">Submit</button>
         </form>
     </div><br>
+    
+    <!-- <p>Here are your notes!</p> -->
 
-    <A href="newnote.html">
-        <button onclick="doScument.getElementById('......').style.display='block'" style="width:auto">New Note</button>
-    </A>
-    <div class="newNote"></div>
-
-    <A href="themes.html">
-        <button onclick="doScument.getElementById('......').style.display='block'" style="width:auto"> 
-            Themes
-        </button>
-    </A>
-
-    <div class="notebook" >
-        <div class="mainNotebookBody"></div>
-        <div class="spiral"></div>
-        <div class="title"></div>
-        <div class="firstTab"></div>
-        <div class="secondTab"></div>
-        <div class="thirdTab"></div>
+    <div class="notebook">
+        <img src="images/notebook.png" class="notebook-picture" alt="notebook cover">
+        <h1>Cool Notes</h1>
+        <A class="new-button" href="newnote.html">
+            <button onclick="doScument.getElementById('......').style.display='block'" style="width:auto">New Note</button>
+        </A>
+        <A class="themes-button" href="themes.html">
+            <button onclick="doScument.getElementById('......').style.display='block'" style="width:auto">Themes</button>
+        </A>
     </div>
 
     <div class="newFiles"></div>
