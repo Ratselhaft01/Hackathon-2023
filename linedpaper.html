@@ -22,7 +22,7 @@
         </div>
         <div class="icon-bar">
             <button type="button" class="logo"><b>Logo</b></button>
-            <button type="button" class="new Section"><b>New Section</b></button>
+            <button type="button" class="new Section" onclick="addcode()"><b>New Section</b></button>
             <button type="button" class="new Picture"><b>New Picture</b></button>
             <div class="drop">
                 <button type="button" class="format"><b>Formatting</b></button>
@@ -33,6 +33,14 @@
                     <script src="public/js/formatting.js"></script>
                 </div>
             </div>
+
+            <script>
+                function addcode(){
+                    document.getElementById("textEditor").innerHTML
+                    += "<h3>This is the new section you added</h3>"
+                }
+            </script>
+
         </div>
     </div>
 </body>
