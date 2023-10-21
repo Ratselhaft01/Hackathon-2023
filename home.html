@@ -14,12 +14,11 @@
 
     
     <div class="topnav">
-        <form action="/action_page.php">
-            <input type="text" placeholder="Search..." name="search">
-        
-            <button type="submit">Submit</button>
-        </form>
+        <input type="text" class="searchBar" id="searchInput" placeholder="Search..." name="search">
+        <button type="submit" onclick="searchFiles()">Submit</button>
+        <ul id="searchResults"></ul>
     </div><br>
+    <script src="public/js/search_bar.js"></script>
     
     <!-- <p>Here are your notes!</p> -->
     <container class="grid-notebook">
