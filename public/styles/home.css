@@ -7,10 +7,11 @@ body {
 }
 
 .logo{
-    width: 100px;
+    width: 10%;
     float: left;
     border-radius: 50%;
     border: #2A3D45 solid 1px;
+    margin: 10px;
 }
 
 .grid-notebook{
@@ -98,7 +99,7 @@ h1{
 
 .topnav form input{
     width: 65%;
-    margin: 2rem;
+    margin: 3%;
     padding: 10px;
 }
 
