@@ -73,7 +73,7 @@ const login = async (targetUrl) => {
   
       if (targetUrl) {
         options.appState = { targetUrl };
-        // window.location.href = 'home.html';
+        // window.location.href = 'cool-notes.us.auth0.com';
       }
   
       await auth0Client.loginWithRedirect(options);
