@@ -1,0 +1,40 @@
+
+.grid-container {
+    margin:0;
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px 200px;
+    grid-gap: 0px;
+}
+
+.text {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    width: 1000px;
+    height: 1750px;
+    outline: none;
+}
+
+body {margin:0}
+
+.icon-bar {
+    grid-column-start: 15;
+    grid-row: 1;
+    width: 300px;
+    background-color: #9bf091;
+    z-index:
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #519b5c;
+}
