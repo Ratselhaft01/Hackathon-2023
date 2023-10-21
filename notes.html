@@ -15,11 +15,20 @@
         <div id="textEditor" contenteditable="true">
             This is an example text. Select a part of this text and click the buttons to format it.
         </div>
+        <img class="hiddenPicture" id="hiddenImage" src="public/images/cool_notes_logo.jpg" style="display: none;" alt="Hidden Image">
         <div class="icon-bar">
             <img id="logo" class="notes_logo" src="public/images/cool_notes_logo.jpg">
-            <!-- <div>............................</div> -->
-            <button type="button" class="new Section"><b>New Section</b></button>
-            <button type="button" class="new Picture"><b>New Picture</b></button>
+            <button type="button" class="newSection"><b>New Section</b></button>
+            <button type="button" id="newPicture"><b>New Picture</b></button>
+            <script>
+                //this is for the new picture button
+                const showButton = document.getElementById('newPicture');
+                const hiddenImage = document.getElementById('hiddenImage');
+    
+                showButton.addEventListener('click', function() {
+                    hiddenImage.style.display = 'block'
+                });
+            </script>
             <div class="drop">
                 <button type="button" class="format"><b>Formatting</b></button>
                 <div class="dropdown-content">
@@ -31,28 +40,27 @@
             </div>
         </div>
     </div>
-    <div class="upload-container">
-        <button type="submit" onclick="searchFiles()">Upload Image</button>
-        <ul id="searchResults"></ul>
-        <img id="fileInput" src="public/js/new_image.js" alt="Image Preview">
     </div>
-    <script src="public/js/new_image.js"></script>
-    <footer>
-        <p>Authors: The Cool Team</p>
-        <p>OUR NAMES HERE</p>
-    </footer> 
-    <!-- <form action="public/js/upload.php" method="post" enctype="multipart/form-data">
-        <input type="file" id="fileInput" style="display: none;">
-        <button type="button" id="uploadButton">Upload Picture</button>
-        <input type="submit" value="Submit">
-    </form> -->
-    <!--
     <script>
-        // JavaScript code to open the file input when the button is clicked
-        document.getElementById("uploadButton").addEventListener("click", function() {
-            document.getElementById("fileInput").click();
+        const fileInput = document.getElementById('fileInput');
+        const previewImage = document.getElementById('previewImage');
+
+        fileInput.addEventListener('change', function() {
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                previewImage.src = '';
+            }
         });
-    </script> -->
+    </script>
+    </div>
 </body>
 <script src="public/js/saver.js"></script>
 </html>

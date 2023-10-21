@@ -1,22 +1,19 @@
 
 function searchFiles() {
     const searchResults = document.getElementById("searchResults");
-    searchResults.innerHTML = ""; // Clear previous results
+    searchResults.innerHTML = ""; 
 
-    // Get a list of all files in the input type=file element
     const fileInput = document.createElement("input");
     fileInput.type = "file";
     fileInput.multiple = true;
     fileInput.style.display = "none";
 
-    // Attach an event listener to the file input to handle selected files
     fileInput.addEventListener("change", function() {
         const files = Array.from(fileInput.files);
         const results = files.filter(file => file.name.includes(searchTerm));
         displaySearchResults(results);
     });
 
-    // Trigger the file input dialog
     fileInput.click();
 }
 
@@ -40,6 +37,7 @@ function displaySearchResults(results) {
             };
     
             reader.readAsDataURL(file);
+
         } else {
             imagePreview.src = '';
         }
