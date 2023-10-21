@@ -28,13 +28,13 @@ window.onload = async () => {
     const query = window.location.search;
     if (query.includes("code=") && query.includes("state=")) {
 
-    // Process the login state
-    await auth0Client.handleRedirectCallback();
-    
-    updateUI();
+        // Process the login state
+        await auth0Client.handleRedirectCallback();
+        
+        updateUI();
 
-    // Use replaceState to redirect the user away and remove the querystring parameters
-    window.history.replaceState({}, document.title, "/");
+        // Use replaceState to redirect the user away and remove the querystring parameters
+        window.history.replaceState({}, document.title, "/");
     }
 };
 
@@ -42,8 +42,23 @@ window.onload = async () => {
 const updateUI = async () => {
     const isAuthenticated = await auth0Client.isAuthenticated();
 
-    document.getElementById("id01").disabled = !isAuthenticated;
+    document.getElementById("btn-logout").disabled = !isAuthenticated;
     document.getElementById("btn-login").disabled = isAuthenticated;
+    
+    if (isAuthenticated) {
+        document.getElementById("gated-content").classList.remove("hidden");
+    
+        document.getElementById(
+          "ipt-access-token"
+        ).innerHTML = await auth0Client.getTokenSilently();
+    
+        document.getElementById("ipt-user-profile").textContent = JSON.stringify(
+          await auth0Client.getUser()
+        );
+    
+    } else {
+    document.getElementById("gated-content").classList.add("hidden");
+    }
 };
 
 const login = async () => {
@@ -60,4 +75,4 @@ const logout = () => {
         returnTo: window.location.origin
       }
     });
-  };
+};
