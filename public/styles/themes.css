@@ -99,3 +99,9 @@ button:hover {
     grid-column: 3/4;
     grid-row: 2/3;
 }
+
+img{
+    width: 300%;
+    margin: .5rem;
+    max-height: 275px;
+}
