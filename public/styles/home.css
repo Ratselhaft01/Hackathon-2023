@@ -61,6 +61,18 @@ h1{
     border: #2A3D45 solid 1px;
 }
 
+.saved-button{
+    grid-column: 7/8;
+    grid-row: 14/18;
+    border: #2A3D45 solid 1px;
+}
+
+.game-button{
+    grid-column: 7/8;
+    grid-row: 20/24;
+    border: #2A3D45 solid 1px;
+}
+
 .spiral{
     background-color: #2A3D45;
     grid-column: 1/3;

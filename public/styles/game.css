@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+:root{
+    --width: 400px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#game{
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    border: 1px #2A3D45 solid;
+}
+
+#btn{
+    font-size: 2rem;
+    font-family: 'Lora', serif;
+    color: #2A3D45;
+    padding: 0.5rem 2rem;
+    border: 3px solid #2A3D45;
+    border-radius: 0.3rem;
+    margin: 1rem auto;
+    display: block;
+    background-color: #8DCECC;
+}
+
+#btn:active{
+    background-color: #EFD6AC;
+}
+
+.slider{
+    visibility: hidden;
+    height: 20px;
+    width: 100px;
+    background-color: #2191FB;
+    position: relative;
+    /* border: #2A3D45 1px solid; */
+}
+
+#slider1{
+    visibility: visible;
+}
+
+.animate{
+    animation: slide 4s infinite linear;
+}
+
+@keyframes slide{
+    0%{left:0px}
+    50%{left:var(--width)}
+    100%{left:0px}
+}
