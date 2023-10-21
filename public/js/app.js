@@ -103,11 +103,12 @@ const login = async (targetUrl) => {
 };
 
 const logout = () => {
-    auth0Client.logout({
-      logoutParams: {
-        returnTo: window.location.origin
-      }
-    });
+    // auth0Client.logout({
+    //   logoutParams: {
+    //     returnTo: window.location.origin
+    //   }
+    // });
+    window.location.href = "https://ratselhaft01.github.io/Hackathon-2023/index";
 };
 
 //https://coolnotes.000webhostapp.com/, http://localhost:3000
