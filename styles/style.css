@@ -7,10 +7,11 @@
 }*/
 
 .newNote {
-    width: 100px;
-    height: 200px;
+    width: 15em;
+    height: 20em;
     background-color: white;
-    border;
+    border-radius: 1em;
+    border: 2px solid gray;
 }
 
 body {font-family: Arial, Helvetica, sans-serif;}
