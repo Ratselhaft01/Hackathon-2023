@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cool Notes</title>
-        <link rel="stylesheet" href="public/styles/login.css"/>
+        <link rel="stylesheet" href="styles/login.css"/>
     </head>
     <body>
         <header>
             <h1>Cool Notes</h1>
         </header>
-        <img src="public/images/cool_notes_logo.jpg" alt="Cool notes" class="avatar">
+        <img src="images/cool_notes_logo.jpg" alt="Cool notes" class="avatar">
         <h3 id="description">Welcome to Cool Notes!</h3>
         <p>Here, you can create the perfect place to put all of your notes and keep them neat and organized!</p>
         <p>To get started, create a login. Once you have a login, create a new note by clicking on the 
@@ -21,6 +21,12 @@
             onclick="login()"
         >   
             Log in
+        </button>
+        <button 
+            id="logout" 
+            onclick="logout()"
+        >   
+            Logout
         </button>
 
         <div id="id01" class="modal">

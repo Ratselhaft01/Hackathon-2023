@@ -22,12 +22,14 @@ html {
     border: 0;
     border: none;
     outline: none;
-    padding: 30px;
+    padding: 40px;
+    margin-top: 10px;
 }
 
 body {margin:0;}
 
 .icon-bar button {
+    font-size: large;
     grid-column: 3;
     height: 75px;
     width: 10vw;
@@ -48,7 +50,7 @@ body {margin:0;}
 .icon-bar {
     grid-column: 4;
     width: 10vw;
-    height: 1000px;
+    height: 1050px;
     background-color: #2A3D45;
     border: none;
 }
@@ -101,6 +103,30 @@ body {margin:0;}
 footer {
     color: white;
     margin: 0 0;
-    height: 50px;
+    height: 100px;
     background-color: #2A3D45;
+}
+
+
+
+.upload-container {
+    text-align: center;
+}
+
+.upload-label {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+}
+
+#fileInput {
+    display: none;
+}
+
+#imagePreview {
+    max-width: 300px;
+    max-height: 300px;
+    margin-top: 20px;
 }
