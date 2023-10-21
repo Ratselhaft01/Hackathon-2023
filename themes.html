@@ -4,24 +4,38 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cool Notes</title>
-        <link rel="stylesheet" href="styles\themes.css">
+        <link rel="stylesheet" href="public/styles/themes.css">
         <script src="usroptaftlogin.js"></script>
     </head>
     <body>
-        <A href="boxedin.html">
-            <button onclick="doScument.getElementById('......').style.display='block'" style="width:auto"> 
-                Boxed In
-            </button>
-        </A>
-        <A href="scientific.html">
-            <button onclick="doScument.getElementById('......').style.display='block'" style="width:auto"> 
-                Scientific
-            </button>
-        </A>
-        <A href="stickynote.html">
-            <button onclick="doScument.getElementById('......').style.display='block'" style="width:auto"> 
-                Sticky Note
-            </button>
-        </A>
+        <header>
+            <img src="images/cool_notes_logo.jpg" class="logo" alt="logo">
+        </header> 
+        <main>
+            <h1>Themes</h1>
+            <div class="grid">
+                <div class="boxedin">
+                    <A href="boxedin.html">
+                        <button onclick="doScument.getElementById('......').style.display='block'" style="width:auto"> 
+                            Boxed In
+                        </button>
+                    </A>
+                </div>
+                <div class="scientific">
+                    <A href="scientific.html">
+                        <button onclick="doScument.getElementById('......').style.display='block'" style="width:auto"> 
+                            Scientific
+                        </button>
+                    </A>
+                </div>
+                <div class="stickynote">
+                    <A href="stickynote.html">
+                        <button onclick="doScument.getElementById('......').style.display='block'" style="width:auto"> 
+                            Sticky Note
+                        </button>
+                    </A>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
