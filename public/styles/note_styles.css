@@ -24,6 +24,7 @@ html {
     outline: none;
     padding: 40px;
     margin-top: 10px;
+    border:  #2A3D45 solid 3px;
 }
 
 body {margin:0;}
@@ -137,4 +138,8 @@ footer {
     max-width: 300px;
     max-height: 300px;
     margin-top: 20px;
+}
+
+div{
+    border:  #2A3D45 solid 3px;
 }
