@@ -21,6 +21,15 @@ body {
     border: 0;
 }
 
+textarea{
+    background: repeating-linear-gradient(
+    to bottom, transparent, transparent 26px, #33d 27px
+    );
+    font-family: 'Lora', serif;
+    font-size: 15px; line-height: 27px;
+    padding: 0px 5px; margin: 8px;
+}
+
 .icon-bar {
     grid-column: 4/5;
     width: 20vw;
