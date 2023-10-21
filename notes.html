@@ -17,18 +17,56 @@
         <div id="textEditor" contenteditable="true">
             This is an example text. Select a part of this text and click the buttons to format it.
         </div>
-        <img class="hiddenPicture" id="hiddenImage" src="public/images/cool_notes_logo.jpg" style="display: none;" alt="Hidden Image">
+        <img class="hiddenPicture" id="hiddenImage" src="" style="display: none;" alt="Hidden Image">
         <div class="icon-bar">
             <img id="logo" class="notes_logo" src="public/images/cool_notes_logo.jpg">
             <button type="button" class="newSection"><b>New Section</b></button>
             <button type="button" id="newPicture"><b>New Picture</b></button>
             <script>
+
+                function searchFiles() {
+                    const searchTerm = document.getElementById("searchInput").value;
+                    const searchResults = document.getElementById("searchResults");
+                    searchResults.innerHTML = ""; // Clear previous results
+
+                    // Get a list of all files in the input type=file element
+                    const fileInput = document.createElement("input");
+                    fileInput.type = "file";
+                    fileInput.multiple = true;
+                    fileInput.style.display = "none";
+
+                    // Attach an event listener to the file input to handle selected files
+                    fileInput.addEventListener("change", function() {
+                        const files = Array.from(fileInput.files);
+                        const results = files.filter(file => file.name.includes(searchTerm));
+                        displaySearchResults(results);
+                    });
+
+                    // Trigger the file input dialog
+                    fileInput.click();
+                }
+
+                function displaySearchResults(results) {
+                    const searchResults = document.getElementById("searchResults");
+                    if (results.length === 0) {
+                        searchResults.innerHTML = "No results found.";
+                        return;
+                    }
+
+                    results.forEach(result => {
+                        const listItem = document.createElement("li");
+                        listItem.textContent = result.name;
+                        searchResults.appendChild(listItem);
+                    });
+                }
+
                 //this is for the new picture button
                 const showButton = document.getElementById('newPicture');
                 const hiddenImage = document.getElementById('hiddenImage');
     
                 showButton.addEventListener('click', function() {
-                    hiddenImage.style.display = 'block'
+                    hiddenImage.style.display = 'block';
+                    hiddenImage.src = "";
                 });
             </script>
             <div class="drop">
@@ -48,34 +86,17 @@
                 }
             </script>
         </div>
-    </div>
+        
+        <img class="hiddenPicture" id="hiddenImage" src="" style="display: none;" alt="Hidden Image">
+        <script>
+            //this is for the new picture button
+            const showButton1 = document.getElementById('newPicture');
+            const hiddenImage1 = document.getElementById('hiddenImage');
 
-
-    <div class="upload-container">
-        <button type="submit" onclick="searchFiles()">Upload Image</button>
-        <ul id="searchResults"></ul>
-        <img id="fileInput" src="public/js/new_image.js" alt="Image Preview">
-    </div>
-    <script>
-        const fileInput = document.getElementById('fileInput');
-        const previewImage = document.getElementById('previewImage');
-
-        fileInput.addEventListener('change', function() {
-            const file = fileInput.files[0];
-            if (file) {
-                const reader = new FileReader();
-
-                reader.onload = function(e) {
-                    previewImage.src = e.target.result;
-                };
-
-                reader.readAsDataURL(file);
-            } else {
-                previewImage.src = '';
-            }
-        });
-    </script>
-    </div>
+            showButton.addEventListener('click', function() {
+                hiddenImage1.style.display = 'block'
+            });
+        </script>
 </body>
 <script src="public/js/saver.js"></script>
 </html>
