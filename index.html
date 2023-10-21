@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cool Notes</title>
-    <link rel="stylesheet" href="styles\style.css">
+    <link rel="stylesheet" href="public\styles\login.css">
 </head>
 <body>
     <header>
@@ -37,7 +37,10 @@
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
             
-        <button type="submit">Login</button>
+        
+        <button type="submit"><A href="home.html">Login</A></button>
+        
+
         <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
@@ -59,13 +62,14 @@
         if (event.target == modal) {
             modal.style.display = "none";
         }
-    }
+    //}
     </script>
     <script src="scripts/test.js"></script>
 
     <footer>
         <a src="..." id="...">Contact Us</a>
     </footer>
-
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

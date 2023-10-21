@@ -1,0 +1,21 @@
+body {
+    background-color: #deeeed;
+    font-family: 'Lora', serif;
+    color: #2A3D45;
+}
+
+button{
+    background-color: #8DCECC;
+    border: #2A3D45 solid 1px;
+    padding: 10px;
+}
+
+div.edit {
+    background-color: white;
+    height: 90px;
+    width: 90px;
+    position: fixed;
+    margin-top: 5px;
+    border: 1px solid black
+} 
+
