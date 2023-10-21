@@ -6,53 +6,46 @@ function download(text, name, type) {
   }
 
 
-  function f1() { 
-    //function to make the text bold using DOM method 
-    document.getElementById("textarea1").style.fontWeight = "bold"; 
-  } 
-  
-  function f2() { 
-    //function to make the text italic using DOM method 
-    document.getElementById("textarea1").style.fontStyle = "italic"; 
-  } 
-  
-  function f3() { 
-    //function to make the text alignment left using DOM method 
-    document.getElementById("textarea1").style.textAlign = "left"; 
-  } 
-  
-  function f4() { 
-    //function to make the text alignment center using DOM method 
-    document.getElementById("textarea1").style.textAlign = "center"; 
-  } 
-  
-  function f5() { 
-    //function to make the text alignment right using DOM method 
-    document.getElementById("textarea1").style.textAlign = "right"; 
-  } 
-  
-  function f6() { 
-    //function to make the text in Uppercase using DOM method 
-    document.getElementById("textarea1").style.textTransform = "uppercase"; 
-  } 
-  
-  function f7() { 
-    //function to make the text in Lowercase using DOM method 
-    document.getElementById("textarea1").style.textTransform = "lowercase"; 
-  } 
-  
-  function f8() { 
-    //function to make the text capitalize using DOM method 
-    document.getElementById("textarea1").style.textTransform = "capitalize"; 
-  } 
-  
-  function f9() { 
-    //function to make the text back to normal by removing all the methods applied 
-    //using DOM method 
-    document.getElementById("textarea1").style.fontWeight = "normal"; 
-    document.getElementById("textarea1").style.textAlign = "left"; 
-    document.getElementById("textarea1").style.fontStyle = "normal"; 
-    document.getElementById("textarea1").style.textTransform = "capitalize"; 
-    document.getElementById("textarea1").value = " "; 
+  // Make the DIV element draggable:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
   }
-  
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
