@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="grid-container">
+        <a href="home.html" class="back_button">
+            <img src="public/images/back arrow better.png" alt="back arrow" style="width:42px;height:42px;">
+          </a>
         <div id="textEditor" contenteditable="true">
             This is an example text. Select a part of this text and click the buttons to format it.
         </div>
@@ -25,20 +28,23 @@
                 </div>
             </div>
         </div>
-        </div>
-        <a href="home.html" class="back_button">
-            <img src="public/images/back arrow better.png" alt="back arrow" style="width:42px;height:42px;">
-          </a>
     </div>
+    <div class="upload-container">
+        <button type="submit" onclick="searchFiles()">Upload Image</button>
+        <ul id="searchResults"></ul>
+        <img id="fileInput" src=displaySearchResults(results) alt="Image Preview">
+    </div>
+    <script src="public/js/new_image.js"></script>
     <footer>
-        <p>Author: The Cool Team</p>
-    </footer>
+        <p>Authors: The Cool Team</p>
+        <p>OUR NAMES HERE</p>
+    </footer> 
     <!-- <form action="public/js/upload.php" method="post" enctype="multipart/form-data">
         <input type="file" id="fileInput" style="display: none;">
         <button type="button" id="uploadButton">Upload Picture</button>
         <input type="submit" value="Submit">
-    </form>
-
+    </form> -->
+    <!--
     <script>
         // JavaScript code to open the file input when the button is clicked
         document.getElementById("uploadButton").addEventListener("click", function() {
