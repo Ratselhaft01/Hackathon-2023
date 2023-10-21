@@ -32,9 +32,13 @@ div{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     max-width: 1600px;
     gap: 10px;
+}
+
+.grid{
+    margin: -100px 0;
 }
 
 button{
@@ -58,16 +62,40 @@ button:hover {
     height: 300px;
     border: #2A3D45 5px solid;
     grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 .scientific{
     height: 300px;
     border: #2A3D45 5px solid;
     grid-column: 2/3;
+    grid-row: 1/2;
 }
 
 .linedpaper{
     height: 300px;
     border: #2A3D45 5px solid;
     grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.checklist{
+    height: 300px;
+    border: #2A3D45 5px solid;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.drawing{
+    height: 300px;
+    border: #2A3D45 5px solid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.snakegame{
+    height: 300px;
+    border: #2A3D45 5px solid;
+    grid-column: 3/4;
+    grid-row: 2/3;
 }
