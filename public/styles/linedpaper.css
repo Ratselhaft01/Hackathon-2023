@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body {
+  font-family: 'Lora', serif;
+  color: #2A3D45;
+}
 
 .grid-container {
     margin:0;
@@ -37,24 +43,7 @@ body {margin:0;}
     background-color: #519b5c;
 }
 
-.back_button {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-#mydiv {
-    position: absolute;
-    z-index: 9;
-    background-color: #f1f1f1;
-    border: 1px solid #d3d3d3;
+h2{
     text-align: center;
-    margin: 20%;
-  }
-  
-  #mydivheader {
-    padding: 10px;
-    cursor: move;
-    z-index: 10;
-    background-color: #2196F3;
-    color: #fff;
-  }
+    margin-top: -30px;
+}
