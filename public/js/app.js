@@ -95,16 +95,20 @@ const login = async (targetUrl) => {
         // window.location.href = 'home.html';
       }
   
-      await auth0Client.loginWithRedirect(options);
+      // await auth0Client.loginWithRedirect(options);
+      window.location.href = ("https://cool-notes.us.auth0.com/u/login?state=hKFo2SBKNURnN20wWnMwR1ZHMjBBVmx2azlCbEl1eU5Jc2dsTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIG1iTlNaVVNyeHFIakEwZ04tLXpPQ3RjTnlXemdhY0Mto2NpZNkgUnk5U3VHalFzekZyR1FMdHUyRDZrZzNUWEtPaW1YemU");
     } catch (err) {
       console.log("Log in failed", err);
     }
 };
 
 const logout = () => {
-    auth0Client.logout({
-      logoutParams: {
-        returnTo: window.location.origin
-      }
-    });
+    // auth0Client.logout({
+    //   logoutParams: {
+    //     returnTo: window.location.origin
+    //   }
+    // });
+    window.location.href = "https://ratselhaft01.github.io/Hackathon-2023/index";
 };
+
+//https://coolnotes.000webhostapp.com/, http://localhost:3000

@@ -6,9 +6,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
     * {
       box-sizing: border-box;
+      background-color: white;
     }
     body {
-      background-color: #f5f5f5;
+      background-color: #bce7ff;
       font-family: 'Roboto', sans-serif;
       display: flex;
       flex-direction: column;
@@ -18,11 +19,11 @@
       margin: 0;
     }
     canvas {
-      border: 2px solid #b246b4;
+      border: 2px solid #b055cb;
     }
     .toolbox {
-      background-color: #b246b4;
-      border: 1px solid #b246b4;
+      background-color: #b055cb;
+      border: 1px solid #b055cb;
       display: flex;
       width: 385px;
       padding: 1rem;
@@ -56,7 +57,7 @@
     <span id="size">10</span>
     <button id="increase">+</button>
     <input type="color" id="color">
-    <button id="clear">X</button>
+    <button id="clear">x</button>
   </div>
 
   <script>
@@ -126,3 +127,6 @@
     })
     colorEl.addEventListener('change', (e) => color = e.target.value)
     clearEl.addEventListener('click', () => ctx.clearRect(0, 0, canvas.width, canvas.height))
+</script>
+</body>
+</html>
