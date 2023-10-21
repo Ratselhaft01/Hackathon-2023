@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body {
+    font-family: 'Lora', serif;
+    color: #2A3D45;
+  }
+
+  .logo{
+    width: 100px;
+    float: left;
+    border-radius: 50%;
+    border: #2A3D45 solid 1px;
+}
+
+main{
+    text-align: center;
+    vertical-align: middle;
+    width: 60%;
+    margin: -210px 20%;
+    padding: 70px 0;
+    display: inline-block;
+    min-width: 575px;
+}
+
+h1{
+    padding: 0 50px 100px;
+    letter-spacing: 1rem;
+    font-size: 5rem;
+}
+
+div{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 1600px;
+    gap: 10px;
+}
+
+button{
+    background-color: #8DCECC;
+    border: #2A3D45 solid 1px;
+    font-family: 'Lora', serif;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin: 0;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+button:hover {
+    opacity: 0.8;
+  }
+
+.boxedin{
+    height: 300px;
+    border: #2A3D45 5px solid;
+    grid-column: 1/2;
+}
+
+.scientific{
+    height: 300px;
+    border: #2A3D45 5px solid;
+    grid-column: 2/3;
+}
+
+.stickynote{
+    height: 300px;
+    border: #2A3D45 5px solid;
+    grid-column: 3/4;
+}

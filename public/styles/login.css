@@ -34,9 +34,8 @@ button {
   margin: 8px 0;
   border-width: 1px;
   border-color: #2A3D45;
-  /* border-radius: 5%; */
   cursor: pointer;
-  width: 100%;
+  width: 80%;
 }
 
 button:hover {

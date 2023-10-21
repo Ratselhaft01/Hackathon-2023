@@ -108,3 +108,7 @@ button{
     padding: 10px;
     font-family: 'Lora', serif;
 }
+
+button:hover {
+    opacity: 0.8;
+  }
