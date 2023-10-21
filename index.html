@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cool Notes</title>
-        <link rel="stylesheet" href="/public/styles/login.css"/>
+        <link rel="stylesheet" href="styles/login.css"/>
     </head>
     <body>
         <header>
@@ -16,8 +16,12 @@
         <p>To get started, create a login. Once you have a login, create a new note by clicking on the 
             plus sign in the top left corner.</p>
 
-        <button id="btn-login" disabled="true" onclick="login()">Log in</button>
-        <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
+        <button 
+            id="login" 
+            onclick="login()"
+        >   
+            Log in
+        </button>
 
         <div id="id01" class="modal">
         
@@ -42,6 +46,6 @@
             <a src="..." id="...">Contact Us</a>
         </footer>
         <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
-        <script src="public/js/app.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>
