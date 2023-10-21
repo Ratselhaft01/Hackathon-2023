@@ -21,8 +21,6 @@ body {
     border: 0;
 }
 
-body {margin:0;}
-
 .icon-bar {
     grid-column: 4/5;
     width: 20vw;
