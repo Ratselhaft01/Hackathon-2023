@@ -40,14 +40,20 @@
             </div>
         </div>
         <div class = "textbox6">
-            <div id="textEditor3" contenteditable="true">
+            <div id="textEditor6" contenteditable="true">
                 This is an example text. Select a part of this text and click the buttons to format it.
+            </div>
+        </div>
+        
+        <div class = "textbox7">
+            <div id="textEditor7" contenteditable="true">
+
             </div>
         </div>
         
         <div class="icon-bar">
             <button type="button" class="logo"><b>Logo</b></button>
-            <button type="button" class="new Section"><b>New Section</b></button>
+            <button type="button" class="new Section" onclick="addcode()"><b>New Section</b></button>
             <button type="button" class="new Picture"><b>New Picture</b></button>
             <div class="drop">
                 <button type="button" class="format"><b>Formatting</b></button>
@@ -58,6 +64,14 @@
                     <script src="public/js/formatting.js"></script>
                 </div>
             </div>
+
+            <script>
+                function addcode(){
+                    document.getElementById("textEditor7").innerHTML
+                    += "<div>This is the new section you added</div>"
+                }
+            </script>
+
         </div>
     </div>
     <footer>

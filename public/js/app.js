@@ -1,6 +1,6 @@
 let auth0Client = null;
 
-const fetchAuthConfig = () => fetch("/auth_config.json");
+const fetchAuthConfig = () => fetch("auth_config.json");
 
 const configureClient = async () => {
     const response = await fetchAuthConfig();
@@ -96,18 +96,19 @@ const login = async (targetUrl) => {
       }
   
       // await auth0Client.loginWithRedirect(options);
-      window.location.href = ("https://cool-notes.us.auth0.com/u/login?state=hKFo2SBKNURnN20wWnMwR1ZHMjBBVmx2azlCbEl1eU5Jc2dsTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIG1iTlNaVVNyeHFIakEwZ04tLXpPQ3RjTnlXemdhY0Mto2NpZNkgUnk5U3VHalFzekZyR1FMdHUyRDZrZzNUWEtPaW1YemU");
+      window.location.href = "https://cool-notes.us.auth0.com/u/login?state=hKFo2SA3c3BUR0x5VDFYVVNQYWZNM2NqX3hQX0RvQUFaSUZZMKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFBwM3BLdGpVNHhzN3NZS3pIOWdNdko0TzE3V1JDZFlto2NpZNkgUnk5U3VHalFzekZyR1FMdHUyRDZrZzNUWEtPaW1YemU";
     } catch (err) {
       console.log("Log in failed", err);
     }
 };
 
 const logout = () => {
-    auth0Client.logout({
-      logoutParams: {
-        returnTo: window.location.origin
-      }
-    });
+    // auth0Client.logout({
+    //   logoutParams: {
+    //     returnTo: window.location.origin
+    //   }
+    // });
+    window.location.href = "https://ratselhaft01.github.io/Hackathon-2023/";
 };
 
 //https://coolnotes.000webhostapp.com/, http://localhost:3000
