@@ -96,7 +96,7 @@ const login = async (targetUrl) => {
       }
   
       // await auth0Client.loginWithRedirect(options);
-      window.location.href = ("https://cool-notes.us.auth0.com/u/login?state=hKFo2SBKNURnN20wWnMwR1ZHMjBBVmx2azlCbEl1eU5Jc2dsTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIG1iTlNaVVNyeHFIakEwZ04tLXpPQ3RjTnlXemdhY0Mto2NpZNkgUnk5U3VHalFzekZyR1FMdHUyRDZrZzNUWEtPaW1YemU");
+      window.location.href = ("https://cool-notes.us.auth0.com/u/login?state=hKFo2SBUMmV1cUlaSWZNYlVaM2lIczZFZjlNc1A5cjZxUmlyZaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIF9MNGUtd3NhU1pYRUdrdzA0VmctaTZHRC1jYjl3RVg0o2NpZNkgUnk5U3VHalFzekZyR1FMdHUyRDZrZzNUWEtPaW1YemU");
     } catch (err) {
       console.log("Log in failed", err);
     }
