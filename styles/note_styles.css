@@ -12,6 +12,7 @@
     grid-column: 1/4;
     width: 80vw;
     height: 100vw;
+    border: 0;
 }
 
 body {margin:0;}
