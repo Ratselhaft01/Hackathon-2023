@@ -1,14 +1,16 @@
-// // Get the button and the element to be modified
-// const formatButton = document.getElementById("formatButton");
-// const content = document.getElementById("content");
-
-// // Add a click event listener to the button
-// formatButton.addEventListener("click", function() {
-//   // Change the HTML content when the button is clicked
-//   content.innerHTML = "Formatted Text";
-// });
 
 
-function formatText(command, value = null) {
-    document.execCommand(command, false, value);
+// function formatText(command, value = null) {
+//     document.execCommand(command, false, value);
+// }
+
+function updateFormattedText() {
+    const inputField = document.getElementById("inputField");
+    const formattedText = document.getElementById("formattedText");
+  
+    const inputText = inputField.value;
+    // Apply formatting or styling to a specific part of the inputText
+    const formattedHTML = `<span style="color: red;">${inputText.substr(0, 5)}</span>${inputText.substr(5)}`;
+    formattedText.innerHTML = formattedHTML;
+    formattedText.style.display = "block";
 }
