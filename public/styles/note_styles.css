@@ -1,3 +1,6 @@
+html {
+    margin: 0;
+}
 
 .grid-container {
     margin:0;
@@ -14,8 +17,8 @@
 #textEditor {
     grid-row: 1; 
     grid-column: 1/2;
-    width: 80vw;
-    height: 100vw;
+    width: 75vw;
+    height: 1000px;
     border: 0;
     border: none;
     outline: none;
@@ -25,36 +28,35 @@
 body {margin:0;}
 
 .icon-bar button {
-    grid-column: 4/5;
-    height: 125px;
-    width: 20vw;
+    grid-column: 3;
+    height: 75px;
+    width: 10vw;
     justify-items: center;
     align-items: center;
     display: block;
     text-align: center;
     padding: 16px;
     transition: all 0.3s ease;
-    color: white;
-    font-size: 36px;
+    color: #8DCECC;
     border: none;
 }
 
 .icon-bar button:hover {
-    background-color: #519b5c;
+    background-color: #2A3D45;
 }
 
 .icon-bar {
-    grid-column: 4/5;
-    width: 20vw;
-    background-color: #9bf091;
+    grid-column: 4;
+    width: 10vw;
+    height: 1000px;
+    background-color: #2A3D45;
     border: none;
 }
 
 .format {
-    width: 20vw;
-    color: white;
+    width: 10vw;
+    color: #8DCECC;
     padding: 16px;
-    font-size: 16px;
     border: none;
 }
   
@@ -64,17 +66,19 @@ body {margin:0;}
 }
   
 .dropdown-content {
-    width: 20vw;
+    width: 10vw;
+    height: 40px;
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #EFD6AC;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .dropdown-content button {
-    width: 20vw;
-    text-size-adjust: 20px;
+    width: 10vw;
+    height: 40px;
+    text-size-adjust: 10px;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -85,11 +89,18 @@ body {margin:0;}
   
 .drop:hover .dropdown-content {display: block;}
   
-.drop:hover .format {background-color: #2a3492;}
+.drop:hover .format {background-color: #2A3D45;}
 
 .back_button {
     grid-column: 1;
     grid-row: 1;
     height: 42px;
     width: 42px;
+}
+
+footer {
+    color: white;
+    margin: 0 0;
+    height: 50px;
+    background-color: #2A3D45;
 }
