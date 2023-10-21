@@ -1,3 +1,5 @@
+/*
+
 body {margin:0;}
 
 .icon-bar {
@@ -22,4 +24,31 @@ body {margin:0;}
 
 .active {
   background-color: #04AA6D;
+}
+*/
+
+.text {
+    float: left;
+    width: 80%;
+    height: 100%;
+}
+
+body {margin:0}
+
+.icon-bar {
+    width: 20%;
+    background-color: #9bf091;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #519b5c;
 }
